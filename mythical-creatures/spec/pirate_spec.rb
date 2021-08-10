@@ -1,5 +1,5 @@
 require 'rspec'
-require './lib/pirate'
+require_relative '../lib/pirate'
 
 RSpec.describe Pirate do
   it 'has a name' do
@@ -36,15 +36,29 @@ RSpec.describe Pirate do
     pirate.commit_heinous_act
     expect(pirate.cursed?).to be true
   end
-
+  
   it 'has a booty' do
     # create a pirate
+    pirate = Pirate.new('Jack')
     # check that the pirate starts with 0 booty
+    expect(pirate.booty).to be 0
   end
-
+  
   it 'gets 100 booty for robbing a ship' do
     # create a pirate
+    pirate = Pirate.new('Jack')
     # rob some ships
+    expect(pirate.booty).to be 0
+  
+    pirate.rob_ship
+    expect(pirate.booty).to be 100
+  
+    pirate.rob_ship
+    expect(pirate.booty).to be 200
+  
+    pirate.rob_ship
+    expect(pirate.booty).to be 300
+
     # check that the pirate got 100 booty for each ship it robbed
   end
 
