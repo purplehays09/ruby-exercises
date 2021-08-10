@@ -3,6 +3,7 @@ RSpec.describe 'Basic Enums Test' do
     s = ''
     5.times do
       # write code here
+      s+='x'
     end
     expect(s).to eq('xxxxx')
   end
@@ -11,6 +12,7 @@ RSpec.describe 'Basic Enums Test' do
     sum = 0
     numbers = [1, 2, 3, 4, 5]
     # write code here
+    5.times { |n| sum + n }
     expect(sum).to eq(15)
   end
 end

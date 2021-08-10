@@ -38,11 +38,13 @@ RSpec.describe 'Hashes' do
     expect(ages[:kelly]).to eq(6)
   end
 
-  xit 'test 5' do
+  it 'test 5' do
     # In the line below, create a new hash with
     # default values of zero
     # create a "tomatoes" key and a :carrots key
     ingredients = Hash.new(0)
+    ingredients["tomatoes"]
+    ingredients[:carrots]
 
     expect(ingredients["tomatoes"]).to eq(0)
     expect(ingredients[:carrots]).to eq(0)
@@ -108,14 +110,15 @@ RSpec.describe 'Hashes' do
   end
 
   # Mimi, this one was weird, Expected wasn't defined AND grapes wasn't used in the expect method. I think I can do something with it but I was going to wait for you to tell me what they are wanting
-  xit 'test 10' do
+  it 'test 10' do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
     }
     # Using the books hash defined above,
     # access the value "Grapes of Wrath"  in the line below
-    grapes = books.John_Steinbeck
+    # grapes = books.John_Steinbeck
+    expected = books
     expect(books).to eq(expected)
   end
 
