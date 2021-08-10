@@ -1,5 +1,5 @@
 require 'rspec'
-require './lib/dragon'
+require_relative '../lib/dragon'
 
 RSpec.describe Dragon do
   it 'has a name' do
@@ -45,6 +45,7 @@ RSpec.describe Dragon do
     dragon.eat
     expect(dragon.hungry?).to be true
     dragon.eat
+    # require 'pry';binding.pry
     expect(dragon.hungry?).to be false
   end
 end
